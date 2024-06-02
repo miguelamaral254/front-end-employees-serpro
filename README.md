@@ -86,16 +86,39 @@ Para configurar a API .NET, siga as instruções disponíveis no repositório [A
    - **Detalhes do Funcionário**: Clique no botão de detalhes ao lado de um funcionário na tabela.
    - **Deletar Funcionário**: Clique no botão de deletar ao lado de um funcionário na tabela e confirme a ação.
 
-## Testes
 
-### Testes do Frontend
+## Características Principais
 
-Os testes do frontend utilizam Jasmine e Karma. Para executar os testes, use o comando:
+1. **Componentes:**
+   - `DetailsComponent`: Mostra os detalhes de um funcionário específico.
+   - `HomeComponent`: Exibe a lista de funcionários e permite buscar funcionários pelo nome.
+   - `RegisterComponent`: Permite registrar um novo funcionário.
+   - `EditComponent`: Permite editar as informações de um funcionário existente.
+   - `DeleteComponent`: Confirma a exclusão de um funcionário.
 
-```bash
-ng test
-```
+2. **Data Binding:**
+   - O data binding é uma técnica fundamental utilizada para conectar os dados do aplicativo à interface do usuário.
+   - **Exemplo 1: Interpolação de Propriedades:**
+     ```html
+     <input matInput type="text" value="{{ employee.name }}" disabled />
+     ```
+     Aqui, `{{ employee.name }}` insere dinamicamente o valor da propriedade `name` do objeto `employee` no template.
+   - **Exemplo 2: Two-Way Binding:**
+     ```html
+     <app-employee-form
+       [btnAction]="btnAction"
+       [btnTitle]="btnTitle"
+       (onSubmit)="createEmployee($event)"
+     ></app-employee-form>
+     ```
+     Este exemplo utiliza two-way binding com `ngModel` para sincronizar os dados entre os campos do formulário e o modelo de dados.
 
-### Testes da API
-
+3. **Rotas:**
+   - O roteamento é configurado no `AppRoutingModule`, fornecendo rotas para as diferentes partes do aplicativo.
+   - Rotas:
+     - `/register`: Página para registrar um novo funcionário.
+     - `/`: Página inicial que lista todos os funcionários cadastrados.
+     - `/edit/:id`: Página para editar as informações de um funcionário existente.
+     - `/detail/:id`: Página para visualizar os detalhes de um funcionário específico.
+--------------------------------------------------------------------------------------------------------------------------------------------------
 Para informações sobre como testar a API, consulte o repositório [API Employees Serpro](https://github.com/miguelamaral254/api-employees-serpro/).
