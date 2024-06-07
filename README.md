@@ -86,7 +86,6 @@ Para configurar a API .NET, siga as instruções disponíveis no repositório [A
    - **Detalhes do Funcionário**: Clique no botão de detalhes ao lado de um funcionário na tabela.
    - **Deletar Funcionário**: Clique no botão de deletar ao lado de um funcionário na tabela e confirme a ação.
 
-
 ## Características Principais
 
 1. **Componentes:**
@@ -120,5 +119,44 @@ Para configurar a API .NET, siga as instruções disponíveis no repositório [A
      - `/`: Página inicial que lista todos os funcionários cadastrados.
      - `/edit/:id`: Página para editar as informações de um funcionário existente.
      - `/detail/:id`: Página para visualizar os detalhes de um funcionário específico.
---------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Utilizando a Versão com json-server
+
+Para utilizar a versão com json-server (sem necessidade de baixar nossa API):
+
+1. **Navegue até o diretório do frontend com json-server**
+
+   ```bash
+   cd front-end-with-json-server
+   ```
+
+2. **Instale as dependências**
+
+   ```bash
+   npm install
+   ```
+
+3. **Execute os seguintes comandos em terminais separados:**
+
+   No primeiro terminal:
+   ```bash
+   json-server --watch db.json --port 3000
+   ```
+
+   No segundo terminal:
+   ```bash
+   ng serve
+   ```
+
+   > Caso a porta 3000 já esteja sendo utilizada, você pode alterar a porta e ajustar isso no arquivo `environment.development.ts` do projeto.
+
+4. **Atualize o arquivo de ambiente `environment.development.ts` com a URL do json-server**
+
+   ```typescript
+   export const environment = {
+     production: false,
+     baseApiUrl: 'http://localhost:3000' // Atualize para a URL correta do json-server
+   };
+   ```
+
 Para informações sobre como testar a API, consulte o repositório [API Employees Serpro](https://github.com/miguelamaral254/api-employees-serpro/).
