@@ -1,0 +1,77 @@
+<mat-card>
+  <h1>{{ btnTitle }}</h1>
+  <form [formGroup]="employeeForm" (ngSubmit)="submit()" #formDit="ngForm">
+    <input type="hidden" formControlName="id" />
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="name">Name:</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="name"
+          placeholder="Name*"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="name">Last name:</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="lastName"
+          placeholder="Last name*"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="name">Department</mat-label>
+        <mat-select
+          id="department"
+          formControlName="department"
+          placeholder="Department"
+          required
+        >
+          <mat-option value="RH">RH</mat-option>
+          <mat-option value="Finance">Finance</mat-option>
+          <mat-option value="IT">IT</mat-option>
+          <mat-option value="Purchasing">Purchasing</mat-option>
+          <mat-option value="Service">Service</mat-option>
+          <mat-option value="Janitorial">Janitorial</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="name">Shift</mat-label>
+        <mat-select
+          id="shift"
+          formControlName="shift"
+          placeholder="Shift"
+          required
+        >
+          <mat-option value="Morning">Morning</mat-option>
+          <mat-option value="Evening">Evening</mat-option>
+          <mat-option value="Night">Night</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="btn-box">
+      <button
+        type="submit"
+        [disabled]="!employeeForm.valid"
+        mat-raised-button
+        color="accent"
+      >
+        {{ btnAction }}
+      </button>
+      <button routerLink="" mat-raised-button>return</button>
+    </div>
+  </form>
+</mat-card>

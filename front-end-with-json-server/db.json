@@ -1,0 +1,44 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Miguel",
+      "lastName": "Amaral",
+      "department": "IT",
+      "shift": "Morning",
+      "createdDate": "2024-06-07T16:25:27.652Z",
+      "modifiedDate": "2024-06-07T16:25:27.652Z",
+      "active": true
+    },
+    {
+      "id": "11",
+      "name": "Gabriel",
+      "lastName": "Cajá",
+      "department": "RH",
+      "shift": "Morning",
+      "createdDate": "2024-06-07T16:26:28.447Z",
+      "modifiedDate": "2024-06-07T16:26:28.447Z",
+      "active": true
+    },
+    {
+      "id": "111",
+      "name": "Matheus",
+      "lastName": "De Sá",
+      "department": "IT",
+      "shift": "Morning",
+      "createdDate": "2024-06-07T16:26:39.962Z",
+      "modifiedDate": "2024-06-07T16:26:39.962Z",
+      "active": true
+    },
+    {
+      "id": "1111",
+      "name": "Welligton",
+      "lastName": "Araújo",
+      "department": "IT",
+      "shift": "Morning",
+      "createdDate": "2024-06-07T16:26:52.519Z",
+      "modifiedDate": "2024-06-07T16:26:52.519Z",
+      "active": true
+    }
+  ]
+}
